@@ -1,0 +1,23 @@
+
+@model tl2_tp10_2023_juanigramajo.ViewModels.Tableros.ModificarTableroViewModel
+
+
+<form asp-controller="Tablero" asp-action="EditarTablero">
+    <input hidden asp-for="@Model.Id">
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.Nombre" class="form-label"></label>
+        <input asp-for="@Model.Nombre" class="form-control"/>
+        <span asp-validation-for="@Model.Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.Descripcion" class="form-label"></label>
+        <input asp-for="@Model.Descripcion" class="form-control"/>
+    </div>
+
+    <button type="submit" class="btn btn-info">Editar</button>
+</form>
+
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

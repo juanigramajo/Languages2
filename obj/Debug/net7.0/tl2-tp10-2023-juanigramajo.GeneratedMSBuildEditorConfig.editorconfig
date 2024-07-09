@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = tl2_tp10_2023_juanigramajo
+build_property.RootNamespace = tl2_tp10_2023_juanigramajo
+build_property.ProjectDir = /Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Tablero/CrearTablero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVyby9DcmVhclRhYmxlcm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Tablero/EditarTablero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVyby9FZGl0YXJUYWJsZXJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Tablero/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFibGVyby9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Tarea/CrearTarea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFyZWEvQ3JlYXJUYXJlYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Tarea/EditarTarea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFyZWEvRWRpdGFyVGFyZWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Tarea/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVGFyZWEvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Usuario/CrearUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpby9DcmVhclVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Usuario/EditarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpby9FZGl0YXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXN1YXJpby9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/juanigramajo/Library/Mobile Documents/com~apple~CloudDocs/Fac/05. Tercer año/02. Segundo cuatrimestre/Taller de Lenguajes II/Trabajos Prácticos/tl2-tp10-2023-juanigramajo/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-3tdrmptc4f

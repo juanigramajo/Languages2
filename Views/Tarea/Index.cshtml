@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model tl2_tp10_2023_juanigramajo.ViewModels.Tareas.ListarTareasViewModel
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h2>Listado de Tareas</h2>
+
+<div class="card-container container-1">
+    @foreach (var tarea in Model.ListadoTareas)
+    {
+        <div class="card">
+            <h5 class="card-header">@tarea.Nombre</h5>
+            <div class="card-body">
+                <h5 class="card-title">ID: @tarea.Id - </h5>
+                @* <h5 class="card-title" hidden>ID Tablero: @tarea.IdTablero</h5>
+                <p class="card-text">@tarea.Descripcion</p>
+                <p class="card-text">@tarea.Color</p>
+                <p class="card-text">@tarea.Estado</p>
+                <p class="card-text">@tarea.IdUsuarioAsignado</p> *@
+                <a asp-controller="Tarea" asp-action="EditarTarea" asp-route-idTarea="@tarea.Id" class="btn btn-info">Editar</a>
+                <a asp-controller="Tarea" asp-action="DeleteTarea" asp-route-idTarea="@tarea.Id" onclick="return confirm('¿Estás seguro que quieres eliminar la tarea?')" class="btn btn-outline-danger">Eliminar</a>                      
+            </div>
+        </div>
+    }
+</div>

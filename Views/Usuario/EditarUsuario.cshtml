@@ -1,0 +1,54 @@
+
+@model tl2_tp10_2023_juanigramajo.ViewModels.Usuarios.ModificarUsuarioViewModel
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@{
+    var RolDeSesion = Context.Session.GetString("Rol");
+    var NombreDeSesion = Context.Session.GetString("NombreDeUsuario");
+
+}
+
+
+<form asp-controller="Usuario" asp-action="EditarUsuario">
+    <input hidden asp-for="@Model.Id">
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.NombreDeUsuario" class="form-label"></label>
+        <input asp-for="@Model.NombreDeUsuario" class="form-control"/>
+        <span asp-validation-for="@Model.NombreDeUsuario" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.Password" class="form-label"></label>
+        <input asp-for="@Model.Password" class="form-control"/>
+        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+    </div>
+
+    @if (RolDeSesion == "Administrador" && NombreDeSesion == @Model.NombreDeUsuario)
+    {
+        <div>
+            <span class="text-danger">No puedes bajar tu propio rango a uno distinto de administrador.</span>
+        </div>
+    } else
+    {
+        <div class="mb-3" class="form-group">
+            <label asp-for="@Model.RolDelUsuario" class="form-label"></label>
+            <select asp-for="@Model.RolDelUsuario" class="form-select" aria-label="Default select example">
+                <option value="Administrador">Administrador</option>
+                <option value="Operador">Operador</option>
+            </select>
+            <span asp-validation-for="@Model.RolDelUsuario" class="text-danger"></span>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-info">Editar</button>
+</form>
+
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

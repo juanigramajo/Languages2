@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Home Page";
+    var RolDeSesion = Context.Session.GetString("Rol");
+    var NombreDeSesion = Context.Session.GetString("NombreDeUsuario");
+
+}
+
+@model tl2_tp10_2023_juanigramajo.ViewModels.Usuarios.ListarUsuariosViewModel
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h2>Listado de Usuarios</h2>
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th hidden>ID</th>
+            <th>Nombre</th>
+            <th>Rol</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.ListadoUsuarios)
+        {
+            <tr>
+                <td hidden>@user.Id</td>
+                <td>@user.NombreDeUsuario</td>
+                <td>@user.RolDelUsuario</td>
+                <td>
+                    @if (RolDeSesion == "Administrador")
+                    {
+                        <a asp-controller="Usuario" asp-action="EditarUsuario" asp-route-idUsuario="@user.Id" class="btn btn-info">Editar</a>
+                        @if (NombreDeSesion == user.NombreDeUsuario)
+                        {
+                            <span class="text-danger">No puedes eliminar tu propio usuario.</span>
+                        } else
+                        {
+                            <a asp-controller="Usuario" asp-action="DeleteUsuario" asp-route-idUsuario="@user.Id" onclick="return confirm('¿Estás seguro que quieres eliminar el usuario?')" class="btn btn-outline-danger">Eliminar</a>                      
+                        }
+                    } else
+                    {
+                        <span class="text-danger">No tienes permiso para editar o eliminar usuarios.</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

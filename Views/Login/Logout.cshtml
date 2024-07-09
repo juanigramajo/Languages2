@@ -1,0 +1,54 @@
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model tl2_tp10_2023_juanigramajo.Models.Usuario
+
+
+<div class="text-center">
+    @if (Model.NombreDeUsuario != null)
+    {
+        <h1 class="display-4">Cerrando sesion...</h1>
+        <h1 class="display-4">¡Vuelve pronto @Model.NombreDeUsuario!</h1>
+    } else
+    {
+        <h1 class="display-4">Cerrando sesion...</h1>
+    }   
+</div>
+
+
+    <p>Redireccionando en <span id="countdown"></span> segundos...</p>
+
+    <script>
+        // Función para redireccionar después de un cierto tiempo
+        function redirectToLogin() {
+            var countdownElement = document.getElementById('countdown');
+            var countdown = 7; // Cambia el valor al número de segundos deseado
+
+            // Función para actualizar el contador
+            function updateCountdown() {
+                countdown--;
+                countdownElement.textContent = countdown;
+                if (countdown <= 0) {
+                    window.location.href = '@Url.Action("Index", "Login")'; // Redirecciona a la página de inicio de sesión
+                } else {
+                    setTimeout(updateCountdown, 1000); // Actualiza el contador cada segundo
+                }
+            }
+
+            updateCountdown();
+        }
+
+        redirectToLogin();
+    </script>
+
+
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

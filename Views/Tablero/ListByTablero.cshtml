@@ -1,0 +1,89 @@
+@{
+    ViewData["Title"] = "Home Page";
+    var IdDeSesion = Context.Session.GetString("Id");
+    var RolDeSesion = Context.Session.GetString("Rol");
+}
+
+@model tl2_tp10_2023_juanigramajo.ViewModels.Tareas.ListarTareasViewModel
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h2>Listado de mis tareas en el tablero</h2>
+<div class="contentTablero">
+
+    @foreach (EstadoTarea estado in Enum.GetValues(typeof(tl2_tp10_2023_juanigramajo.Models.EstadoTarea)))
+    {
+        <div class="card-container container-1">
+        <h2 class="font-weight-bold">@estado</h2>
+            @foreach (var tarea in Model.ListadoTareas)
+            {
+                @if (@estado == @tarea.Estado)
+                {
+                    <div class="card">
+                        <h5 class="card-header">@tarea.Nombre</h5>
+                        <div class="card-body">
+                            <h5 class="card-title">ID: @tarea.Id - </h5>
+                            @* <h5 class="card-title" hidden>ID Tablero: @tarea.IdTablero</h5>
+                            <p class="card-text">@tarea.Descripcion</p>
+                            <p class="card-text">@tarea.Color</p>
+                            <p class="card-text">@tarea.Estado</p>
+                            <p class="card-text">@tarea.IdUsuarioAsignado</p> *@
+                            @if (RolDeSesion == "Administrador" || IdDeSesion == Model.IdUsuarioAsignado)
+                            {
+                                <a asp-controller="Tarea" asp-action="EditarTarea" asp-route-idTarea="@tarea.Id" class="btn btn-info">Editar</a>
+                                <a asp-controller="Tarea" asp-action="DeleteTarea" asp-route-idTarea="@tarea.Id" onclick="return confirm('¿Estás seguro que quieres eliminar la tarea?')" class="btn btn-outline-danger">Eliminar</a>                      
+                            }
+                            else
+                            {
+                                <span class="text-danger">No tienes permiso para editar o eliminar esta tarea.</span>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>
+
+
+<h2>Listado de otras tareas en el tablero</h2>
+<div class="contentTablero">
+
+    @foreach (EstadoTarea estado in Enum.GetValues(typeof(tl2_tp10_2023_juanigramajo.Models.EstadoTarea)))
+    {
+        <div class="card-container container-1">
+        <h2 class="font-weight-bold">@estado</h2>
+            @foreach (var tarea in Model.ListadoOtrasTareas)
+            {
+                @if (@estado == @tarea.Estado)
+                {
+                    <div class="card card-tarea">
+                        <h5 class="card-header">@tarea.Nombre</h5>
+                        <div class="card-body">
+                            <h5 class="card-title">ID: @tarea.Id - </h5>
+                            @* <h5 class="card-title" hidden>ID Tablero: @tarea.IdTablero</h5>
+                            <p class="card-text">@tarea.Descripcion</p>
+                            <p class="card-text">@tarea.Color</p>
+                            <p class="card-text">@tarea.Estado</p>
+                            <p class="card-text">@tarea.IdUsuarioAsignado</p> *@
+                            @if (RolDeSesion == "Administrador" && IdDeSesion == Model.IdUsuarioAsignado)
+                            {
+                                <a asp-controller="Tarea" asp-action="EditarTarea" asp-route-idTarea="@tarea.Id" class="btn btn-info">Editar</a>
+                                <a asp-controller="Tarea" asp-action="DeleteTarea" asp-route-idTarea="@tarea.Id" onclick="return confirm('¿Estás seguro que quieres eliminar la tarea?')" class="btn btn-outline-danger">Eliminar</a>                      
+                            }
+                            else
+                            {
+                                <span class="text-danger">No tienes permiso para editar o eliminar esta tarea.</span>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>

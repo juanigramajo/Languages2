@@ -1,0 +1,66 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.contentTablero {
+  display: flex;
+  flex-direction: row;
+  background-color: #ab6758;
+  margin-bottom: 1em;
+}
+
+.tablerosConteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Para que las tarjetas se distribuyan uniformemente en el contenedor */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Para que las tarjetas se distribuyan uniformemente en el contenedor */
+  gap: 20px; /* Espacio entre las tarjetas */
+  width: 15rem;
+  margin: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+.container-1 {
+  background-color: #FF5733; /* Color para el primer contenedor */
+  padding: 1rem;
+}
+
+.container-2 {
+  background-color: #33FF57; /* Color para el segundo contenedor */
+  padding: 1rem;
+}
+
+.container-3 {
+  background-color: #5733FF; /* Color para el tercer contenedor */
+  padding: 1rem;
+}

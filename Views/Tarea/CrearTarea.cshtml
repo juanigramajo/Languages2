@@ -1,0 +1,65 @@
+
+@model tl2_tp10_2023_juanigramajo.ViewModels.Tareas.CrearTareaViewModel
+
+
+<form asp-controller="Tarea" asp-action="CrearTarea">
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.IdTablero" class="form-label"></label>
+        <select asp-for="@Model.IdTablero" class="form-select">
+            @foreach(Tablero tab in Model.ListadoTableros) {
+                <option value="@tab.Id">@tab.Nombre</option>
+            }
+        </select>
+        <span asp-validation-for="@Model.IdTablero" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.Nombre" class="form-label"></label>
+        <input asp-for="@Model.Nombre" class="form-control"/>
+        <span asp-validation-for="@Model.Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.Estado" class="form-label"></label>
+        <select asp-for="@Model.Estado" class="form-select" aria-label="Default select example">
+            <option value="Ideas" selected>Ideas</option>
+            <option value="ToDo">ToDo</option>
+            <option value="Doing">Doing</option>
+            <option value="Review">Review</option>
+            <option value="Done">Done</option>
+        </select>
+        <span asp-validation-for="@Model.Estado" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.Descripcion" class="form-label"></label>
+        <input asp-for="@Model.Descripcion" class="form-control"/>
+        <span asp-validation-for="@Model.Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.Color" class="form-label"></label>
+        <input asp-for="@Model.Color" class="form-control"/>
+        <span asp-validation-for="@Model.Color" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3" class="form-group">
+        <label asp-for="@Model.IdUsuarioAsignado" class="form-label"></label>
+        <select asp-for="@Model.IdUsuarioAsignado" class="form-select">
+            @foreach(Usuario user in Model.ListadoUsuarios) {
+                <option value="@user.Id">@user.NombreDeUsuario</option>
+            }
+        </select>
+        <span asp-validation-for="@Model.IdUsuarioAsignado" class="text-danger"></span>
+    </div>
+
+    <input hidden asp-for="@Model.ListadoTableros">
+    <input hidden asp-for="@Model.ListadoUsuarios">
+
+
+    <button type="submit" class="btn btn-info">Crear</button>
+</form>
+
+
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }
